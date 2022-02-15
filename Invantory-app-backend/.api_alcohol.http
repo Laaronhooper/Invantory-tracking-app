@@ -1,0 +1,49 @@
+### Successful Responses
+
+### Retrieve All Alcohol from Alcohol Table
+
+GET http://localhost:3000/api/alcohols
+
+
+### Add new Alcohol
+
+POST http://localhost:3000/api/alcohols
+Content-Type: application/json
+# Use the User http client to log in with a user, then get the jwt tokent and paste it here in the format of "Bearer <jwt token>"
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQwMTAxMjIsInN1YiI6NH0.y67GXFPPyxVCTqlpLmd1R8OzxYKcrBagM4ZGPkvGMA8
+
+{
+    "name":"Jim Beams",
+    "volume_in_ml": 4000,
+    "critical_volume":2000
+
+}
+
+
+### Show a specific Alcohol by name
+
+GET http://localhost:3000/api/alcohols/:id
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQzNTUxMDEsInN1YiI6NH0.Zzwvv9wHhazUI7c7xN1HuKm4X7ovbBbrRF-pdhKsakI
+
+{
+    "name":"Jim Beam"
+}
+
+### Edit an Existing Alcohol
+
+PUT http://localhost:3000/api/alcohols/37
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDMwMDU2OTQsInN1YiI6Mjh9.A023tFAKRsIe7xvFcHkWacLmSZCkApYVanR_fZNZNo4
+
+{
+    "name":"werwerwerewrewrwerwer",
+    "volume_in_ml": 4000,
+    "critical_volume":2000
+
+}
+
+### DELETE>destroy
+DELETE http://localhost:3000/api/alcohols/8
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDMxNjU4MDksInN1YiI6OH0.XNApwVYzcv553yKJOATJYx2ftUOVTi_LB7hJGzm25gk
+

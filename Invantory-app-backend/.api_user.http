@@ -1,0 +1,72 @@
+### Successful Responses
+
+### Retrieve All Users from User Table
+
+GET http://localhost:3000/api/auth/users
+
+
+
+### Create User
+POST http://localhost:3000/api/auth/sign_up
+Content-Type: application/json
+
+{
+    "username": "user1",
+    "is_active":true,
+    "password": "password",
+    "password_confirmation": "password",
+    "admin": false
+}
+
+
+### Show a specific User by username
+
+GET http://localhost:3000/api/auth/users/:id
+Content-Type: application/json
+
+{
+    "username":"user@user.com"
+}
+
+
+### Updating a User by ID
+
+PUT http://localhost:3000/api/auth/users/22
+Content-Type: application/json
+
+{
+    "username":"tomato@potato.com"
+}
+
+
+### Deleting a User by ID
+
+DELETE http://localhost:3000/api/auth/users/1
+
+### Admin Signing in with Correct Details
+POST http://localhost:3000/api/auth/sign_in
+Content-Type: application/json
+
+{
+    "username": "admin@admin.com",
+    "password": "password123"
+}
+
+
+### Nonadmin Signing in with Correct Details
+POST http://localhost:3000/api/auth/sign_in
+Content-Type: application/json
+
+{
+    "username": "user@user.com",
+    "password": "password123"
+}
+
+### Deactivated user Signing in with Correct Details
+POST http://localhost:3000/api/auth/sign_in
+Content-Type: application/json
+
+{
+    "username": "de@de.com",
+    "password": "password123"
+}

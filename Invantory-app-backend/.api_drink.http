@@ -1,0 +1,46 @@
+### Successful Responses
+
+### Retrieve All Alcohol from Alcohol Table
+
+GET http://localhost:3000/api/drinks
+
+
+### Add new Alcohol
+POST http://localhost:3000/api/drinks
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQzNTUxMDEsInN1YiI6NH0.Zzwvv9wHhazUI7c7xN1HuKm4X7ovbBbrRF-pdhKsakI
+# Use the User http client to log in with a user, then get the jwt tokent and paste it here in the format of "Bearer <jwt token>"
+
+{
+  "id": 6,
+  "name": "Tripple trouble",
+  "alcohol_amount": 90,
+  "alcohol_id": 1,
+  "mixer_id": 1,
+  "mixer_amount": 60,
+  "user_id": 1
+}
+
+### Show
+GET http://localhost:3000/api/drinks/:id
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDMxNjg2NjYsInN1YiI6NH0.ktDwLW7gJMcbr28lNb2Hi-dWg7qq3IIXbPiodMaAQ0Q
+
+{
+    "name":"Double trouble"
+}
+
+### Edit an Existing Alcohol
+
+PUT http://localhost:3000/api/drinks/2
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyNDAxMTQsInN1YiI6NH0.sg4-m3CdVlgUdf8BknXyHSHPlXNSOIX2mUM85S6ZPaM
+
+{
+  "name": "The bestest P-p-p-pepsi",
+  "alcohol_id": 3,
+  "alcohol_amount": 90,
+  "mixer_id": 1,
+  "mixer_amount": 60,
+  "user_id": 1
+}
